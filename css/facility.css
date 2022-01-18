@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/* 공통 */
+.top_img {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 1000px;
+}
+
+.top_img>div {
+    width: 100%;
+    overflow: hidden;
+    animation: moving 25s linear 1s infinite;
+
+}
+
+@keyframes moving {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.top_img img {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.top_img h2 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 7vw;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 5;
+    color: #fff;
+
+}
+
+.f_main {
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    z-index: 3;
+    clear: both;
+}
+
+.f_main article {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 60%;
+    max-width: 1200px;
+    float: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 270px 270px;
+    grid-gap: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+.f_main article img {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.8s;
+}
+
+.f_main article img:hover {
+    transform: scale(1.1);
+}
+
+.f_main article div {
+    overflow: hidden;
+    font: size 16px;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+figure {
+    overflow: hidden;
+    height: 270px;
+}
+
+.smalltxt {
+    font-size: 14px;
+}
+
+@media screen and (max-width:1024px) {
+    .top_img {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        height: 500px;
+        object-fit: fill;
+    }
+
+    .top_img img {
+        height: 100%;
+        width: auto;
+    }
+
+    figure {
+        overflow: hidden;
+        height: auto;
+    }
+
+    .f_main article {
+        width: 90%;
+    }
+
+    .f_main {
+        top: 230px;
+    }
+
+    .f_main article div {
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 1.4;
+        font-weight: bold;
+    }
+
+    .smalltxt {
+        font-size: 10px;
+    }
+
+    .f_main article {
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 60%;
+        max-width: 1200px;
+        float: right;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+        align-items: center;
+    }
+}

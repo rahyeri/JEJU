@@ -1,0 +1,331 @@
+@charset "utf-8";
+/*
+http://rahyeri.dothome.co.kr/jeju의 모바일 maincss입니다
+copyright(c) rahyeri 
+최종수정일 : 22.01.08
+*/
+@media screen and (max-width:1120px) {
+    .gnb {
+        position: fixed;
+        z-index: 50000;
+    }
+
+    #visual>h2 {
+        font-size: 8vw;
+    }
+
+    .visual_t {
+        font-size: 8vh;
+    }
+
+    fieldset,
+    .h_box .login {
+        display: none;
+    }
+
+    .boxh2 {
+        justify-content: right;
+    }
+
+    /*  */
+    #reservation {
+        text-transform: capitalize;
+        font-size: 14px;
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        z-index: 400;
+        color: #fff;
+    }
+
+    .datetimepicker-input {
+        font-size: 16px;
+    }
+
+    .col-xs-4 {
+        display: none;
+        position: relative;
+        left: 150px;
+        top: -450px;
+        z-index: 500;
+    }
+
+    /*  */
+    .roomtitle {
+        font-size: 9vw;
+        text-indent: 20px;
+    }
+
+    .room_back {
+        height: 500px;
+    }
+
+    #room01 p,
+    #room02 p {
+        font-size: 12px;
+    }
+
+    #room01 h3,
+    #room02 h3 {
+        font-size: 16px;
+    }
+
+    .inner1 {
+        display: block;
+        position: relative;
+        z-index: 401;
+        left: 0px;
+        width: 90%;
+    }
+
+    .inner1 img {
+        width: 100%;
+    }
+
+    #room01 h3>span,
+    #room02 h3>span {
+        font-size: 13px;
+        text-align: left;
+        color: #aa7f09;
+        font-family: 'Times New Roman', Times, serif;
+        transform: translateX(50px);
+        display: block;
+    }
+
+    #type2 {
+        transform: translateX(20px);
+    }
+
+    #type1,
+    #type2 {
+        padding: 20px 0px 0px 50px;
+    }
+
+    .inner2 {
+        width: 40%;
+    }
+
+    .inner1>p {
+        position: absolute;
+        top: 74%;
+        left: 0%;
+        z-index: 610;
+        /* display:none;  */
+    }
+
+    .intro {
+        
+        height:500px;
+    }
+    .intro h2{
+        left:50%;
+        transform:translateX(-50%);
+        position:absolute;
+        width:100%;
+    }
+    .intro ul {
+        left:50%;
+        transform:translateX(-50%);
+        width:90%;
+        bottom:20px;
+    }
+
+    footer nav {
+        font-size: 12px;
+    }
+
+    .footer_in {
+        width: 100%;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        text-align: center;
+    }
+
+    .footer_in a,
+    .footersns {
+        width: 60%;
+    }
+
+    .footersns ul {
+        padding: 0;
+    }
+
+    footer address {
+        margin-top: 10px;
+    }
+
+    .footernavi {
+        text-align: center;
+    }
+
+    /* .footer_in img{transform:translateX(20px);} */
+}
+
+.intro>h2 {
+    font-size: 10vh;
+}
+
+@media screen and (max-width:767px) {
+
+    header,
+    main,
+    footer {
+        overflow: hidden;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .boxh1 {
+        display: none;
+    }
+
+    .boxh2 {
+        width: 50px;
+        padding-right: 0px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    #reservation {
+        left: -50px;
+    }
+
+    .col-xs-4 {
+        left: 10px;
+    }
+
+    .gnb {
+        width: 80%;
+    }
+
+    /* i.fa-close{left:0px;} */
+
+    .inner1 {
+        width: 100%;
+        top: 30px;
+        z-index:1;
+    }
+
+    #inner1_wrap {
+        width: 100%;
+    }
+
+    .inner1>p {
+        left: 0;
+        right: -10px;
+    }
+
+    .inner2 {
+        width: 100%;
+        display: inline-block;
+        position:static;
+    }
+
+    #room01 {
+        color: #fff;
+        background-color: #0c2644;
+        width: 100%;
+        height: 400px;
+        position: relative;
+    }
+
+    .rbotton2 {
+        display: none;
+    }
+
+    #t_b {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        background-color: #0c2644;
+        width: 100%;
+        height: 400px;
+    }
+
+    aside {
+        display: none;
+    }
+    /* 인트로섹션 */
+    .intro {
+        margin-top: 300px;
+    }
+    .intro h2{}
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .grid_wrap {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 70%;
+        margin: 0px auto;
+    }
+
+    .grid_wrap li a {
+        width: 100%;
+    }
+
+    .grid_wrap li img {
+        width: 100%;
+    }
+
+    .grid_wrap li:last-child {
+        order: 0;
+    }
+
+    .grid_wrap li:nth-child(1) {
+        order: 1;
+    }
+
+    .grid_wrap li:nth-child(3) {
+        order: 2;
+    }
+
+    .grid_wrap li:nth-child(4) {
+        order: 3;
+    }
+
+    .grid_wrap li:nth-child(7) {
+        order: 4;
+    }
+
+    .grid_wrap>li:nth-child(2) {
+        position: relative;
+    }
+
+    .grid_wrap>li:nth-child(2) .menuinfo {
+        position: absolute;
+        top: 40%;
+        left: 80%;
+        transform: translateX(-50%);
+        color: #fff;
+    }
+
+    .tour h2 {
+        position: absolute;
+        font-size: 15vh;
+        left: -78px;
+    }
+
+    .tour>article {
+        float: right;
+        margin-right: 10px;
+        height: 400px;
+        width: 70%;
+        overflow: hidden;
+
+    }
+
+    #r_gnb {
+        width: 50%;
+        margin: 0px auto;
+    }
+}

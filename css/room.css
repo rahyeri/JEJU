@@ -1,0 +1,536 @@
+@charset "utf-8";
+
+/* main{height:1000px; overflow:hidden;} */
+/* 공통 */
+.top_img {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.top_img>div {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  animation: moving 25s linear 1s infinite;
+
+}
+
+@keyframes moving {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.top_img img {
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.top_img h2 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 7vw;
+  font-family: 'Times New Roman', Times, serif;
+  z-index: 5;
+  color: #fff;
+
+}
+
+.room_main {
+  height: fit-content;
+  margin-bottom: -400px;
+}
+
+.room_main h2 {
+  font-size: 26px;
+  font-size: 5vh;
+  width: 50%;
+  margin: 50px auto 80px auto;
+  line-height: 2;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.room_main h2 span {
+  margin: 30px auto 50px auto;
+  display: block;
+  font-weight: normal;
+  font-size: 16px;
+  font-size: 2.5vh;
+}
+
+
+#tab_con {
+  width: 50%;
+  top: -75vh;
+  z-index: 1;
+  position: relative;
+  /* margin:0px auto; 포지션주면 쓰지말기 */
+  /* 초기설정 =안보이게*/
+  left: 50%;
+  transform: translate(-60%);
+  opacity: 1;
+  transition: 0.5s;
+  margin-bottom: 80px;
+
+}
+
+/* 스크롤내릴시 act >날라오게 적용 */
+.act {
+  left: 30% !important;
+  opacity: 1 !important;
+}
+
+/*중복서식 임폴턴트 쓰라고!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#tab_con img {
+  width: 100%;
+  display: block;
+  min-height: 330px;
+  object-fit: cover;
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+#tab_con .lnb {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -220px;
+  top: 68px;
+  width: 200px;
+  padding: 20px 5px;
+  background-color: rgba(255, 249, 223, 0.26);
+}
+
+#tab_con .lnb>li {
+  padding: 0px 20px;
+  height: 40px;
+  margin: 10px auto;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-top: 4px double #fff;
+  border-right: 4px double #fff;
+  transition: 0.5s;
+}
+
+#tab_con .lnb>li a {
+  line-height: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+#tab_con .lnb>li:hover {
+  border-left: 2px solid #b0691b;
+  border-bottom: 2px solid #b0691b;
+  border-top: 4px double #cf8230;
+  border-right: 4px double #da8429;
+}
+
+#tab_con .lnb a:hover {
+  color: #583e06;
+}
+
+.back_box {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  left: -20px;
+  top: -20px;
+  background-color: #b0691b;
+  z-index: -5;
+}
+
+/* 어바웃스테이 */
+#about {
+  transform: translateY(-200px);
+  width: 100%;
+  padding: 40px 0px 30px 0px;
+  height: 310px;
+  /* overflow:hidden; */
+  background-color: #29939b;
+}
+
+.about_inner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px auto;
+  color: #ffffff;
+}
+
+.about_txt {
+  width: 96%;
+  max-width: 323px;
+  float: left;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+.p01 {
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 18px;
+  color: #f1f1f1;
+  padding: 12px 0px 20px 0px;
+}
+
+.p02 {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+
+.about_stay {
+  width: 667px;
+  float: left;
+  padding: 0px 0px 40px 0px;
+  box-sizing: border-box;
+  /* 박스크기에 테두리, 패딩값을 포함하여 계산 */
+  border-bottom: 1px solid #ffffff;
+}
+
+.about_stay dl {
+  text-align: center;
+}
+
+.about_stay dt {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.about_stay dt::before,
+.about_stay dt::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 12px;
+}
+
+.about_stay dt::before {
+  left: 0px;
+}
+
+.about_stay dt::after {
+  right: 0px;
+}
+
+.about_stay dd {
+  width: 134px;
+  height: 84px;
+  display: inline-block;
+  /* 가로, 세로크기, 여백설정, 글자처럼 정렬도 가능 */
+  text-align: center;
+}
+
+.about_stay dd span {
+  font-size: 12px;
+  display: block;
+  padding: 8px 0px;
+}
+
+/* room1 */
+
+.visual_inner .slider_wrap {
+  position: relative;
+  width: 55%;
+  margin: 0 auto;
+  left: -70px;
+}
+
+.visual_inner .sliderBox {
+  position: relative;
+  height: 80vh;
+  /*높이*/
+  overflow: hidden;
+}
+
+/* .visual_inner .sliderBox 부모 */
+/* 그라데이션 라인 - mobile */
+.top_bold,
+.top,
+.bottom_bold,
+.bottom {
+  background: #b0691b;
+  border-image: -moz-linear-gradient(left, #b0691b 0%, #f6de7a 19%, #e29c0f 49%, #f6de7a 76%, #b0691b 100%);
+  background: -webkit-linear-gradient(left, #b0691b 0%, #f6de7a 19%, #e29c0f 49%, #f6de7a 76%, #b0691b 100%);
+  background: linear-gradient(to right, #b0691b 0%, #f6de7a 19%, #e29c0f 49%, #f6de7a 76%, #b0691b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b0691b', endColorstr='#b0691b', GradientType=1);
+}
+
+/*그라데이션*/
+.sliderBox .line_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  /*680*/
+  /*높이*/
+  z-index: 5;
+}
+
+.top_bold {
+  display: block;
+  width: 100%;
+  height: 3px;
+  /*6*/
+  margin-top: 15px;
+  /*30*/
+}
+
+.bottom_bold {
+  display: block;
+  width: 100%;
+  height: 3px;
+  /*6*/
+  margin-top: 75vh;
+  /*높이*/
+}
+
+.left_bold {
+  display: block;
+  width: 3px;
+  /*6*/
+  height: 140%;
+  background: #b0691b;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  /*30*/
+}
+
+.right_bold {
+  display: block;
+  width: 3px;
+  /*6*/
+  height: 140%;
+  background: #b0691b;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  /*30*/
+}
+
+.line_inner>.top {
+  display: block;
+  width: 100%;
+  height: 1px;
+  /*2*/
+  position: absolute;
+  top: 10px;
+  /*20*/
+  right: 0;
+}
+
+.line_inner>.bottom {
+  display: block;
+  width: 100%;
+  height: 1px;
+  /*2*/
+  position: absolute;
+  bottom: 10px;
+  /*20*/
+  right: 0;
+}
+
+.line_inner>.left {
+  display: block;
+  width: 1px;
+  /*2*/
+  height: 100%;
+  background: #b0691b;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  /*20*/
+}
+
+.line_inner>.right {
+  display: block;
+  width: 1px;
+  /*2*/
+  height: 100%;
+  background: #b0691b;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  /*20*/
+}
+
+/*animation */
+.line_box>span:nth-child(odd) {
+  animation: wSizeUp 6s infinite forwards;
+}
+
+.line_box>span:nth-child(even) {
+  animation: hSizeUp 4s infinite forwards;
+}
+
+.line_inner>span:nth-child(odd) {
+  animation: wSizeUp 6s infinite forwards;
+}
+
+.line_inner>span:nth-child(even) {
+  animation: hSizeUp 4s infinite forwards;
+}
+
+@keyframes wSizeUp {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes hSizeUp {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+/* end - 그라데이션 라인 */
+.about_txt h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* room2 */
+#room2img {
+  filter: brightness(0.8);
+}
+
+@media screen and (max-width:1024px) {
+  #tab_con {
+    width: 90%;
+    top: -75vh;
+    z-index: 1;
+    position: relative;
+    left: 0%;
+    transform: translate(0%);
+    opacity: 1;
+    transition: 0.5s;
+    /* margin-bottom: 80px; */
+  }
+
+  #tab_con .lnb {
+    left: 60%;
+    width: 100px;
+  }
+
+  #tab_con .lnb li a {
+    font-size: 12px;
+    padding: 5px;
+    line-height: 30px;
+  }
+
+  #tab_con .lnb>li {
+    padding: 0px 10px;
+    height: 30px;
+  }
+
+  .top_img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .top_img>div {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    animation: moving 25s linear 1s infinite;
+
+  }
+
+  .top_img h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .room_main h2 {
+    font-size: 26px;
+    font-size: 4vh;
+    width: 96%;
+    margin: 100px auto 0px auto;
+    line-height: 2;
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+  }
+
+  .room_main h2 span {
+    margin: 30px auto 50px auto;
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    font-size: 1.5vh;
+  }
+
+  #about {
+    height: auto;
+    transform: translateY(0px);
+  }
+
+  .about_txt,
+  .about_stay {
+    float: none;
+    margin: 20px auto;
+  }
+
+  .about_txt p,
+  .about_stay span {
+    font-size: 12px;
+  }
+
+  .sliderBox .line_box {
+    height: 50vh;
+  }
+
+  .bottom_bold {
+    display: block;
+    width: 100%;
+    height: 3px;
+    /*6*/
+    margin-top: 45vh;
+    /*높이*/
+  }
+
+}
+
+@media screen and (max-width:667px) {
+
+  .about_txt,
+  .about_stay {
+    width: 96%;
+  }
+
+
+}

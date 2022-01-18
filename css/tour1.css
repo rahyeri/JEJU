@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 9vw;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding-left: 20px;
+    box-sizing: border-box;
+
+}
+
+article {
+    width: 100%;
+    background-color: rgb(159, 226, 204);
+}
+
+.intro_txt {
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    font-size: 13px;
+}
+
+.intro_txt span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+main {
+    height: fit-content;
+    padding-bottom: 50px;
+}
+
+section {
+    height: 500px;
+    padding-bottom: 50px;
+
+}
+
+.swiper-slide a {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.swiper-slide a span {
+    display: block;
+    font-size: 12px;
+    margin: 10px;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 50px auto;
+}

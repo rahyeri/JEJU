@@ -1,0 +1,621 @@
+@charset "utf-8";
+
+@media screen and (min-width:1025px) {
+
+
+
+    body {
+        width: 100%;
+    }
+
+    header,
+    footer {
+        width: 1200px;
+        margin: 0px auto;
+    }
+
+
+    /*헤더*/
+    header {
+        height: 100px;
+        position: relative;
+        z-index: 10000000;
+    }
+
+    #login {
+        position: absolute;
+        top: 0px;
+        border-bottom: 1px solid rgb(158, 145, 145);
+        display: flex;
+        height: 30px;
+        width: 100%;
+        padding-top: 15px;
+        font-size: 12px;
+        color: #333333;
+    }
+
+    /*맨윗줄*/
+    #login>#search {
+        display: none;
+    }
+
+    #header_s {
+        display: none;
+    }
+
+    #search {
+        position: relative;
+        top: -3px;
+        font-size: 12px;
+        margin: 0px 10px 10px 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 1px solid #cccccc;
+        border-radius: 10px;
+    }
+
+    #header_s:checked~#search {
+        display: block;
+    }
+
+    .login {
+        font-size: 12px;
+        text-decoration: none;
+        position: absolute;
+        right: 0px;
+
+    }
+
+    /*맨윗줄*/
+    a:visited {
+        color: #333333;
+    }
+
+    h1 {
+        width: 240px;
+        height: 100px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        z-index: 1000000;
+        transform: translateX(-50%);
+    }
+
+    h1 img {
+        width: 100%;
+        background-color: #fff;
+        padding: 0px 20px;
+    }
+
+    /*네비*/
+    .gnb {
+        padding-top: 40px;
+    }
+
+    .gnb>ul {
+        display: flex;
+        justify-content: space-around;
+        text-transform: uppercase;
+
+    }
+
+    .gnb>ul>li {
+        position: relative;
+    }
+
+    .gnb>ul>li>a {
+        font-size: 16px;
+        display: block;
+        line-height: 40px;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .gnb>ul>li:nth-last-child(4) {
+        padding: 0px 140px;
+
+    }
+
+    .gnb:hover::before {
+        content: "";
+        width: 100%;
+        height: 230px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+
+    }
+
+    .gnb>ul>li:hover>a::after {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 3px;
+        position: absolute;
+        top: 50px;
+        left: 15px;
+        background-color: #111111;
+
+    }
+
+    .gnb01 {
+        display: none;
+        position: absolute;
+        height: 200px;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+    }
+
+    .gnb>ul:hover .gnb01 {
+        display: block;
+
+    }
+
+    .gnb01>li {
+        text-align: center;
+
+    }
+
+    .gnb01>li>a {
+        line-height: 50px;
+        padding: 30px 0px;
+        text-decoration: none;
+
+    }
+
+    /*네비*/
+
+    #menu,
+    #reser {
+        display: none;
+    }
+
+
+
+    article>ul {
+        display: flex;
+    }
+
+    /*메인시작*/
+    main {
+        text-align: center;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 28px;
+        padding: 80px;
+        text-transform: uppercase;
+    }
+
+    #visual {
+        position: relative;
+    }
+
+    /*
+#visual .m_v{width:100%; height:850px;
+    object-fit:cover;
+}
+.btn{
+position:absolute;
+top:45%;left:0;
+width:100%;display:flex;
+}
+.btn a{width:50px; height:auto; position:absolute;
+        transition:0.6s;}
+.btn a >img{width:100%;}
+.btn a:hover{transform:scale(2); }
+.btn a:first-child{display:block; left:100px;}
+.btn a:last-child{display:block; right:100px;}
+*/
+    #visual>h2 {
+        position: absolute;
+        z-index: 40000;
+        line-height: 60px;
+        font-size: 40px;
+        color: #f3eded;
+        left: 50%;
+        transform: translateX(-550px);
+        font-family: '나눔 명조', serif;
+        width: 900px;
+    }
+
+    #visual .visual_t {
+        font-size: 50px;
+    }
+
+    #reservation {
+        position: absolute;
+        right: 8%;
+        bottom: 10%;
+        z-index: 40000;
+        width: 975px;
+        height: 55px;
+        background-color: rgb(231, 231, 231);
+        border-radius: 15px;
+        border: 4px solid #fff;
+        box-shadow: 5px 5px #e4c8c8;
+    }
+
+    #reservation>ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .small {
+        width: 100px;
+    }
+
+    .large {
+        width: 168px;
+    }
+
+    #reservation>ul>li {
+        font-size: 17px;
+        padding: 10px 0px;
+        line-height: 30px;
+        font-weight: bold;
+    }
+
+    #reservation>ul>li:nth-child(odd) {
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.788);
+    }
+
+    #reservation>ul>li:last-child {
+        border: none;
+        background-color: #2b3b04;
+        color: #ffffff;
+        transition: 0.5s;
+        border-radius: 15px;
+    }
+
+    #reservation>ul>li:last-child a {
+        color: #ffffff;
+        padding: 25px;
+        font-size: 18px;
+    }
+
+    #reservation>ul>li:last-child:hover {
+        background-color: rgb(0, 0, 0);
+        width: 200px;
+
+    }
+
+    #reservation>ul>li:last-child:hover a {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    #reservation>ul>li>a {
+        text-decoration: none;
+        padding: 30px;
+    }
+
+
+    /*SECTION 1*/
+    .room {
+        width: 1200px;
+        margin: 0px auto;
+        height: 1100px;
+    }
+
+    .room>p {
+        line-height: 100px;
+        font-size: 18px;
+    }
+
+    .roomtitle {
+        padding-bottom: 0px;
+    }
+
+    .room>article {
+        padding: 20px 0px;
+    }
+
+    .room>article>ul>li {
+        width: 600px;
+        height: 407px;
+    }
+
+    .room>article>ul a>img {
+        width: 600px;
+        height: 407px;
+        object-fit: cover;
+    }
+
+    .room>article>ul>li>h3 {
+        color: #b65740;
+        font-size: 20px;
+        padding: 40px;
+        font-weight: bold;
+    }
+
+    .room>article>ul>li>p {
+        margin-left: 40px;
+        line-height: 28px;
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .room>article>ul>li>.botton {
+
+        text-align: center;
+        font-size: 16px;
+        position: relative;
+        top: 50px;
+        left: 250px;
+    }
+
+    .room>article>ul>li>.botton a {
+        padding: 15px 20px;
+        background-color: rgb(201, 117, 117);
+        transition: 0.8s;
+        color: #ffffff;
+        border-radius: 10px;
+        width: 180px;
+        display: block;
+    }
+
+    .room>article>ul>li>.botton a:hover {
+        background-color: rgb(182, 67, 67);
+
+        transform: translateX(50px);
+        display: block;
+        font-weight: bold;
+    }
+
+
+
+
+
+    /*SECTION 2*/
+
+    .tour {
+        width: 1200px;
+        margin: 3px auto;
+        height: 550px;
+    }
+
+    .tour>h2 {
+        padding-bottom: 100px;
+    }
+
+    .mySwiper {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .mySwiper .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mySwiper .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .mySwiper .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .swiper-slide li:last-child a {
+        font-weight: bold;
+        line-height: 2;
+    }
+
+    /*SECTION 3*/
+    h6 {
+        display: none;
+    }
+
+    .menu {
+        width: 1200px;
+        margin: 0px auto;
+        height: 870px;
+    }
+
+
+    .menu>article>ul>li>.menuinfo {
+        display: block;
+        position: absolute;
+        left: 10%;
+        bottom: 10%;
+        z-index: 50;
+        color: rgb(252, 248, 235);
+        font-size: 40px;
+        text-transform: uppercase;
+        width: 500px;
+        height: 200px;
+        text-align: center;
+    }
+
+    .menu>article>ul>li>.menuinfo>.menu_p {
+        color: rgb(252, 248, 235);
+        font-size: 20px;
+    }
+
+    .menu>article>ul a>img {
+        width: 600px;
+        height: 435px;
+        object-fit: cover;
+    }
+
+    .menu>article>ul>li {
+        position: relative;
+        width: 600px;
+        height: 435px;
+    }
+
+    /* 추가된 부분 */
+    .darkness {
+        position: absolute;
+        z-index: 45;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        background: #000000;
+        opacity: 0;
+        /* 투명모드  */
+        transition: all .6s linear;
+        /* 애니메이션효과 */
+    }
+
+
+    .btn-plus {
+        position: absolute;
+        top: 150px;
+        right: 100px;
+        width: 100px;
+        height: 30px;
+        line-height: 2;
+        text-align: center;
+        opacity: 0;
+        transform: scale(5);
+        /* 크기조절  */
+        transition: all .3s linear;
+    }
+
+    .btn-plus span {
+        font-size: 1em;
+        color: #ffffff;
+        user-select: none;
+    }
+
+
+    /* 추가된 부분 */
+    .menuup li:hover .darkness {
+        opacity: 0.3;
+    }
+
+    .menuup li:hover .btn-plus {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .menudown li:hover .darkness {
+        opacity: 0.4;
+    }
+
+    .menudown li:hover .btn-plus {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    /* 추가된 부분 */
+
+    /*FOOTER*/
+    footer {
+        width: 100%;
+        height: 260px;
+        background-color: #333333;
+        position: relative;
+    }
+
+    .footer_in {
+        width: 1200px;
+        margin: 0px auto;
+    }
+
+    .footer_in>div>ul {
+        display: flex;
+        padding: 30px 0px 30px 520px;
+    }
+
+    .footernavi {
+        width: 500px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footernavi>li>a {
+        color: #f3eded;
+    }
+
+    .call {
+        position: absolute;
+        right: 20%;
+        width: 208px;
+        height: 90px;
+        display: inline-block;
+    }
+
+    .call img {
+        float: left;
+        width: 50px;
+    }
+
+    #call_t {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .call>p {
+        line-height: 20px;
+        color: #ffffff;
+    }
+
+    .footer_in .foot_logo {
+        float: left;
+        padding: 20px;
+    }
+
+    .footer_in>address {
+        float: left;
+        padding: 20px;
+        color: #c2bfbf;
+        font-size: 11px;
+        line-height: 15px;
+        text-align: left;
+    }
+
+    /*top버튼*/
+    aside {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        text-align: center;
+    }
+
+    aside>a {
+        background-color: #ffffff;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 50px;
+        border-radius: 50%;
+        border: 1px solid #d3d2d2;
+        transition: 0.5s;
+    }
+
+    aside>a:hover {
+        background-color: #291b1b;
+        color: #ffffff;
+    }
+
+}

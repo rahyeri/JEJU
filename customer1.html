@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatable" content="IE=edge">
+        <title>제주 올레로 펜션 홈페이지입니다.</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        <link href="./css/reset.css" rel="stylesheet" type="text/css">
+        <link href="./css/base.css" rel="stylesheet" type="text/css">
+        <link href="./css/layout.css" rel="stylesheet" type="text/css">
+        <link href="./css/customer.css" rel="stylesheet" type="text/css">
+        <link href="./css/all.min.css" rel="stylesheet" type="text/css">
+        <link
+        href="./css/aos.css" rel="stylesheet" type="text/css">
+        <!-- 제이쿼리슬라이드 -->
+        <link href="./css/swiper.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"/>
+
+        <style></style>
+        <!-- 스크립트 -->
+        <script src="./js/swiper.js"></script>
+        <script src="./js/prefixfree.min.js"></script>
+        <script src="./js/aos.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+        <script>
+            $(document).ready(function () { // 타이틀
+                $('article > h2').animate({
+                    'letter-spacing': '30px'
+                }, 1000).animate({
+                    'letter-spacing': '2px'
+                }, 1000).animate({
+                    'letter-spacing': '10px'
+                }, 1000);
+
+                // 내비
+                let g = $('.gnb');
+                $('i.fa-close').click(function () {
+                    g.animate({
+                        'right': '-100%'
+                    }, 700);
+                });
+                $('i.fa-bars').click(function () {
+                    g.animate({
+                        'right': '0%'
+                    }, 600);
+
+                    return false;
+                });
+                let s = $('.gnb > ul > li > a');
+                let sub = $('.gnb01');
+                s.click(function () {
+                    $(this).next().slideToggle();
+                    $(this).toggleClass('act');
+                    $(this).find('i').toggleClass('act1');
+                });
+
+                // 푸터 예약
+                $('.f_rbox').hide();
+                $('.f_reservation').click(function () {
+                    $('.f_rbox').slideToggle();
+                    $(this).css('background', '#ccc').css('font-weight', 'bold');
+                });
+
+                let list = $('section > article > ul > li a');
+                list.click(function () {
+                    $(this).next().slideToggle();
+
+                    return false;
+                });
+                $('section > article > ul > li:first-child a').click(function () {
+                    $(this).next().hide();
+                    return false;
+                });
+                // 탭버튼
+                $('#qna_btn').click(function () {
+                    $('.qna').show();
+                    $('#notice').hide();
+                    return false;
+                });
+                $('#event_btn').click(function () {
+                    $('.qna').hide();
+                    $('#notice').show();
+                    return false;
+                });
+            });
+        </script>
+    </head>
+
+    <!--헤더시작-->
+
+    <body>
+
+        <header>
+            <input type="checkbox" id="toggle">
+            <div class="h_box">
+                <fieldset>
+                    <legend>검색</legend>
+                    <input type="search" id="search" maxlength="12" size="12">
+                    <label for="header_s">
+                        <i class="fas fa-search"></i>
+                    </label>
+                </fieldset>
+                <a href="#" title="로그인" class="login">LOGIN</a>
+            </div>
+
+            <h1>
+                <a href="index.html" title="home으로">
+                    <img src="./01.img/logo.png" alt="로고">
+                </a>
+            </h1>
+            <div class="h_box boxh2">
+                <a href="reser1.html" title="실시간 예약하기" class="login">RESERVATION</a>
+                <a href="#" title="메뉴보기">
+                    <i class="fas fa-bars" id="menu"></i>
+                </a>
+
+                <a href="#" title="예약현황보기"><img src="./01.img/reser.png" alt="예약버튼" id="reser"></a>
+            </div>
+
+            <nav class="gnb">
+                <a href="#" title="실시간 예약하기" class="login" id="r_gnb">RESERVATION</a>
+                <i class="fas fa-close"></i>
+                <ul>
+                    <li>
+                        <a href="#" title="제주올래로소개">about<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="intro.html" title="제주올래로소개">제주올래로소개</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="숙박안내">accommodation<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="room1.html" title="오피스텔형16평">type A&#46; studio 16
+                                </a>
+                            </li>
+                            <li>
+                                <a href="room2.html" title="오피스텔형23평">type b&#46; penthouse 23</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="부대시설안내">facility<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="facility1.html" title="바베큐 이용안내">바베큐</a>
+                            </li>
+                            <li>
+                                <a href="facility2.html" title="야외수영장 이용안내">야외 수영장</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="관광정보안내">tour<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="tour1.html" title="관광지 안내">주변 관광지</a>
+                            </li>
+                            <li>
+                                <a href="tour3.html" title="제주올레길 안내">제주올레길</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="고객게시판">customer<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="customer1.html" title="공지및행사안내">공지&#xFF06;행사</a>
+                            </li>
+                            <li>
+                                <a href="customer2.html" title="문의하기">문의하기</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="예약하기">reservation<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="reser1.html" title="실시간 예약현황">실시간 예약현황</a>
+                            </li>
+                            <li>
+                                <a href="reser2.html" title="예약문의">예약문의</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+        <!--헤더영역끝 메인시작-->
+        <main>
+            <article>
+                <h2>CUSTOMER</h2>
+            </article>
+            <ul class="tab_btn">
+                <li>
+                    <a href="#" title="공지사항" id="event_btn">공지&#38;행사</a>
+                </li>
+                <li>
+                    <a href="#" title="문의하기" id="qna_btn">문의하기</a>
+                </li>
+            </ul>
+            <section>
+                <article id="notice">
+                  <ul>
+                    <li>
+                        <a href="#" title="공지" class="date">
+                            날짜
+                            <span class="subject">
+                                제목</span>
+                            번호</a>
+                        <p>&nbsp;</p>
+                    </li>
+                    <li>
+                        <a href="#" title="공지" class="date">
+                            2021&#45;04&#45;30
+                            <span class="subject">
+                                2021년 제주올레로 야외수영장 및 객실 이용 안내</span>
+                            6</a>
+                        <p>올해 2021년 제주올레로 시설 운영계획을 알려드립니다.
+                            <br>
+                            &#91; 제주올레로 야외수영장 &#93;
+                            <br>
+                            &#8251;운영기간 &#58; 2021년 6월 1일 &#126; 2021년 9월 30일
+                            <br>
+                            &#8251;운영시간 &#58; 오전 9시 30분 &#126; 오후 9시 30분
+                            <br>
+                            단계별거리두기 수칙에 따라 운영하므로&#44; 정부방침에 따라서 운영시간제한 또는 사용제한이 될 수도 있습니다&#46;</p>
+                    </li>
+                    <li>
+                        <a href="#" title="공지" class="date">
+                            2020&#45;12&#45;25
+                            <span class="subject">
+                                2020년 하반기 긴급공지사항</span>
+                            5</a>
+                        <p>정부의 긴급 예방시책에 따라 아래와 같이 운영함을 알려드립니다&#46;
+                            <br>
+
+                            &#91; 예약 관련 사항 &#93;
+                            <br>
+                            &#8251;5인을 초과하여 예약을 받지 않습니다&#46;
+                            <br>
+                            &#8251;객실 내에서 모임&#44; 파티&#44; 음주유흥 등은 할 수 없습니다&#46; 위 사실을 확인할 경우&#44; 퇴실조치하며 환불은 하지 않습니다&#46;</p>
+                    </li>
+
+                    <li>
+                        <a href="#" title="공지" class="date">
+                            2020&#45;08&#45;20
+                            <span class="subject">
+                                2020년 코로나19 대비한 제주올레로 관리 운영현황</span>
+                            4</a>
+                        <p>2020년은 코로나19로 인해 많은 부분에서 변화가 생겼습니다&#46;<br>
+                            저희 제주올레로에서는 올해 2020년 2월부터 코로나19 바이러스 차단을 위해 청소시 환기&#44; 살균&#44; 소독을 시행하고 있음을 알려 드립니다&#46;</p>
+                    </li>
+                    <li>
+                        <a href="#" title="공지" class="date">
+                            2017&#45;07&#45;05
+                            <span class="subject">
+                              &quot;우종훈 작은 음악회&quot; 를 10월 28일&#40;토&#41; 까지 연장 운영합니다&#46;</span>
+                            3</a>
+                        <p>
+                            4월부터 운영해온 &quot;우종훈 작은 음악회&quot;가 원래 9월말 종료할 예정            이었으나 고객 여러븐에 요청에 의해 10월말까지 연장 운영합니다&#46;기간 &#58;  &#126; 2016년 10월 28일&#40;토&#41;운영시간 &#58; 매주토요일 오후6시 &#126; 7시 &#40;한시간&#41;
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#" title="공지" class="date">
+                            2017&#45;03&#45;28
+                            <span class="subject">
+                                제주올레로 공식 제휴렌트카 이용안내입니다</span>
+                            2</a>
+                        <p>안녕하세요&#63; 제주올레로입니다&#46;
+                            <br>
+                            고객여러분들의 렌트카 관련 문의가 많아 &#40;주&#41;올레렌트카와 제휴를 맺었습니다&#46;
+
+                            <br>
+
+                            이용방법은 &#40;주&#41;올레렌트카 고객센터  직접 전화문의 064 &#46;743 &#46;7300 또는 홈페이지 www&#46;ollerentcar&#46;com 직접 방문 하셔서 이용하시면 됩니다.</p>
+                    </li>
+                    <li>
+                        <a href="#" title="공지" class="date">
+                            2016&#45;09&#45;27
+                            <span class="subject">
+                              &quot;제주올레로에서 열리는 우종훈의 음악회&quot;</span>
+                            1</a>
+                        <p>
+                          &quot;싱어송라이터 우종훈의 작은 음악회&quot;를 열게 되었습니다&#46; 아름다운 음악을 함께 즐겨보세요&#46;
+                            <br>
+                            운영시간 &#58; 매주토요일 오후6시 &#126; 7시 &#40;한시간&#41;
+                        </p>
+                    </li>
+                </ul>
+                </article>
+                <article class="qna">
+                    <fieldset id="inquiry">
+                        <legend>문의</legend>
+                        <div>이름</div>
+                        <div>
+                            <p>
+                                <input type="text"></p>
+                        </div>
+                        <div>이메일</div>
+                        <div>
+                            <p>
+                                <input type="text"></p>
+                        </div>
+                        <div>제목</div>
+                        <div>
+                            <p>
+                                <input type="text"></p>
+                        </div>
+                        <div>상담내용</div>
+                        <div>
+                            <textarea property="value"></textarea>
+                        </div>
+                        <div>
+                            <a href="#" title="문의하기">문의내용 메일보내기</a>
+                        </div>
+                        <div>라</div>
+                    </fieldset>
+                </article>
+            </section>
+        </main>
+        <!--메인영역끝 푸터시작-->
+
+
+        <footer>
+            <div class="f_reservation">
+                <p>
+                    <i class="far fa-calendar-check"></i>예약 안내<i class="fas fa-angle-down"></i>
+                </p>
+            </div>
+            <div class="f_rbox">
+                <a href="01011111111" title="예약전화">예약문의 010.123.4567</a>
+                <a href="reser1.html" title="실시간 예약 페이지로 이동">
+                    Online 예약하기<i class="far fa-hand-point-right"></i>
+                </a>
+            </div>
+            <div class="footer_in">
+                <a href="index.html" title="home으로">
+                    <img src="./01.img/logo.png" alt="로고">
+                </a>
+                <div class="footersns">
+                    <ul>
+                        <li><a href="#" title="구글"><i class="fab fa-google"></i></a></li>
+                        <li><a href="#" title="인스타그램"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" title="트위터"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+                <nav>
+                    <ul class="footernavi">
+                        <li>
+                            <a href="#" title="개인정보처리방침">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#" title="이메일무단수집거부">이메일무단수집거부</a>
+                        </li>
+                        <li>
+                            <a href="#" title="이용약관">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#" title="고객센터">고객센터</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <address>상호명 &#58; &#40;주&#41;제주올레로 &nbsp;&nbsp;&nbsp; 대표이사 &#58; OOO &nbsp;&nbsp;&nbsp;<br>주소 &#58; 제주특별자치도 제주시 일주서로 7335&#45;1
+                      &#40;외도이동 343번지&#41;<br>HP &#58; 010&#46; 000&#46; 0000 &nbsp;&nbsp;&nbsp; 이메일 &#58; a24055113&#64;hanmail.net<br>Copyright &copy;
+                      &#40;주&#41;제주올레로&#46; All Rights Reserved&#46;
+            </address>
+            <aside>
+                <a href="#" title="위로가기">
+                    <i class="fas fa-angle-up"></i><br>TOP</a>
+            </aside>
+
+        </footer>
+    </body>
+</html>

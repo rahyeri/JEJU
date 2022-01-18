@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 7vw;
+  color: rgb(175, 175, 175);
+  text-align: right;
+  padding-right: 100px;
+  box-sizing: border-box;
+
+}
+
+.svg_back {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+figurecaption {
+  display: none;
+}
+
+figure {
+  position: relative;
+  width: 60%;
+  max-width: 1200px;
+  margin: 50px auto 0px auto;
+  top: -150px;
+}
+
+figure img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+}
+
+video {
+  height: auto;
+  width: 100%;
+  margin: 0px auto;
+  object-fit: cover;
+}
+
+.double {
+  font-size: 200px;
+  font-family: 'Montagu Slab', serif;
+  font-weight: 700;
+  transform: rotate(180deg);
+  color: #ccc;
+  transition: 1s;
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+  top: -200px;
+  left: -700px;
+}
+
+.intro_main {
+  height: 0px;
+  width: 49%;
+  /* background-color:aqua; */
+  overflow: hidden;
+  position: relative;
+  top: -270px;
+  left: 22%;
+
+}
+
+.intro_main h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 5vh;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+.intro_main p {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 30px;
+  line-height: 1.6;
+}
+
+.intro_txt {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  font-size: 13px;
+}
+
+.intro_txt span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#one01 {
+  position: absolute;
+  z-index: -1;
+  top: 700px;
+  left: 10%;
+  display: block;
+}
+
+#one02 {
+  position: absolute;
+  z-index: -1;
+  top: 730px;
+  left: 13%;
+  width: 80px;
+  display: block;
+  animation: moving 4s 1s infinite;
+}
+
+@keyframes moving {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#one03 {
+  position: absolute;
+  z-index: -1;
+  width: 180px;
+  top: 1500px;
+  right: 10%;
+  display: block;
+  animation: moving1 6s 6s infinite;
+}
+
+@keyframes moving1 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 지도 */
+
+@media screen and (max-width:767px) {
+  #one03 {
+    top: 300px;
+  }
+
+  .intro_main h2 {
+    font-size: 3vh;
+  }
+
+  .intro_main {
+    height: 0px;
+    width: 49%;
+    /* background-color:aqua; */
+    overflow: hidden;
+    position: relative;
+    top: -200px;
+    left: 22%;
+
+  }
+
+  .intro_main p {
+    font-size: 11px;
+  }
+
+  figure {
+    position: relative;
+    width: 95%;
+    margin: 20px auto 0px auto;
+    top: -170px;
+  }
+}
+
+.map {
+  text-align: left;
+  width: 80%;
+  margin: 50px auto 100px auto;
+  max-width: 1200px;
+
+}
+
+.map>p {
+  margin: 20px 30px;
+  text-align: left;
+}
+
+
+iframe {
+  width: 100%;
+  height: 300px;
+
+}
+
+main {
+  background-image: url(../01.img/map_back.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 1920px 400px;
+}

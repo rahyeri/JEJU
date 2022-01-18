@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatable" content="IE=edge">
+        <title>제주 올레로 펜션 홈페이지입니다.</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        <link href="./css/reset.css" rel="stylesheet" type="text/css">
+        <link href="./css/base.css" rel="stylesheet" type="text/css">
+        <link href="./css/layout.css" rel="stylesheet" type="text/css">
+        <link href="./css/reser.css" rel="stylesheet" type="text/css">
+        <link href="./css/all.min.css" rel="stylesheet" type="text/css">
+        <link
+        href="./css/aos.css" rel="stylesheet" type="text/css">
+        <!-- 제이쿼리슬라이드 -->
+        <link href="./css/swiper.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"/>
+
+        <style></style>
+        <!-- 스크립트 -->
+        <script src="./js/swiper.js"></script>
+        <script src="./js/prefixfree.min.js"></script>
+        <script src="./js/aos.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- 달력 -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.top_img h2').animate({
+                    'letter-spacing': '30px'
+                }, 1000).animate({
+                    'letter-spacing': '2px'
+                }, 1000).animate({
+                    'letter-spacing': '5px'
+                }, 1000);
+
+
+                // 내비
+                let g = $('.gnb');
+                $('i.fa-close').click(function () {
+                    g.animate({
+                        'right': '-100%'
+                    }, 700);
+                });
+                $('i.fa-bars').click(function () {
+                    g.animate({
+                        'right': '0%'
+                    }, 600);
+
+                    return false;
+                });
+                let s = $('.gnb > ul > li > a');
+                let sub = $('.gnb01');
+                s.click(function () {
+                    $(this).next().slideToggle();
+                    $(this).toggleClass('act');
+                    $(this).find('i').toggleClass('act1');
+                });
+
+                // 푸터 예약
+                $('.f_rbox').hide();
+                $('.f_reservation').click(function () {
+                    $('.f_rbox').slideToggle();
+                    $(this).css('background', '#ccc').css('font-weight', 'bold');
+                });
+
+
+                // 룸
+                let room1 = $('.reser_main > article > ul > li:first-child');
+                let room2 = $('.reser_main > article > ul > li:nth-child(2)');
+
+                room1.click(function () {
+                    room2.hide();
+                    $(this).css('padding-top', '80px');
+                });
+                room2.click(function () {
+                    room1.hide();
+                    $(this).css('padding-top', '80px');
+
+                });
+            });
+        </script>
+    </head>
+
+  
+    <body>
+      <!--헤더시작-->
+        <header>
+            <input type="checkbox" id="toggle">
+            <div class="h_box">
+                <fieldset>
+                    <legend>검색</legend>
+                    <input type="search" id="search" maxlength="12" size="12">
+                    <label for="header_s">
+                        <i class="fas fa-search"></i>
+                    </label>
+                </fieldset>
+                <a href="#" title="로그인" class="login">LOGIN</a>
+            </div>
+
+            <h1>
+                <a href="index.html" title="home으로">
+                    <img src="./01.img/logo.png" alt="로고">
+                </a>
+            </h1>
+            <div class="h_box boxh2">
+                <a href="reser1.html" title="실시간 예약하기" class="login">RESERVATION</a>
+                <a href="#" title="토글버튼">
+                    <i class="fas fa-bars" id="menu"></i>
+                </a>
+
+                <a href="#" title="예약현황보기"><img src="./01.img/reser.png" alt="예약버튼" id="reser"></a>
+            </div>
+
+            <nav class="gnb">
+                <a href="reser1.html" title="실시간 예약하기" class="login" id="r_gnb">RESERVATION</a>
+                <i class="fas fa-close"></i>
+                <ul>
+                    <li>
+                        <a href="#" title="제주올래로소개">about<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="intro.html" title="제주올래로소개">제주올래로소개</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="숙박안내">accommodation<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="room1.html" title="오피스텔형16평">type A&#46; studio 16
+                                </a>
+                            </li>
+                            <li>
+                                <a href="room2.html" title="오피스텔형23평">type b&#46; penthouse 23</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="부대시설안내">facility<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="facility1.html" title="바베큐 이용안내">바베큐</a>
+                            </li>
+                            <li>
+                                <a href="facility2.html" title="야외수영장 이용안내">야외 수영장</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="#" title="관광정보안내">tour<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="tour1.html" title="관광지 안내">주변 관광지</a>
+                            </li>
+                            <li>
+                                <a href="tour3.html" title="제주올레길 안내">제주올레길</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="고객센터">customer<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="customer1.html" title="공지및행사안내">공지&#xFF06;행사</a>
+                            </li>
+                            <li>
+                                <a href="customer2.html" title="문의하기">문의하기</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="예약하기">reservation<i class="fas fa-angle-down"></i>
+                        </a>
+                        <ul class="gnb01">
+                            <li>
+                                <a href="reser1.html" title="실시간 예약현황">실시간 예약현황</a>
+                            </li>
+                            <li>
+                                <a href="reser2.html" title="예약문의">예약문의</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+        <!--헤더영역끝 메인시작-->
+
+        <main>
+            <section class="top_img">
+                <h2>RESERVATION</h2>
+                <div>
+                    <img src="./01.img/reser1.jpg" alt="바다사진">
+                </div>
+            </section>
+            <!-- 실시간예약메인 -->
+            <section class="reser_main">
+                <article>
+                    <ul>
+                        <li>
+                            <h3>Studio 16</h3>
+                            <p>
+                                <label for="room">룸선택</label>
+                                <select id="room">
+                                    <option>101</option>
+                                    <option>102</option>
+                                    <option>201</option>
+                                    <option>202</option>
+                                </select>
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Penthouse 23</h3>
+                            <label for="room">룸선택</label>
+                            <select id="room">
+                                <option>301</option>
+                                <option>302</option>
+                                <option>501</option>
+                                <option>502</option>
+                            </select>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <p>입실일</p>
+                    <p><input type="date"></p>
+                    <p>퇴실일</p>
+                    <p><input type="date"></p>
+                </article>
+                <article>
+                    <p>숙박인원</p>
+                    <p><input type="number" placeholder="1"></p>
+                </article>
+                <article>
+                    <input type="submit" value="실시간 예약하기">
+                </article>
+            </section>
+            <section class="about">
+                <article class="about_stay">
+                    <dl>
+                        <dt>SERVICE BY OLLERO</dt>
+                        <dd>
+                            <img src="./images/ico_nature01b.png" alt="OCEANVIEW">
+                            <span>OCEANVIEW</span>
+                        </dd>
+                        <dd>
+                            <img src="./images/ico_wellness01b.png" alt="wellness">
+                            <span>WELLNESS</span>
+                        </dd>
+                        <dd>
+                            <img src="./images/ico_pet01b.png" alt="pet">
+                            <span>PET LOVE</span>
+                        </dd>
+                        <dd>
+                            <img src="./images/ico_minibarb.png" alt="mini bar">
+                            <span>FREE MINI BAR</span>
+                        </dd>
+                        <dd>
+                            <img src="./images/ico_spa01b.png" alt="spa">
+                            <span>PREMIUM SPA</span>
+                        </dd>
+                        <dd>
+                            <img src="./images/ico_point01b.png" alt="point">
+                            <span>REWARDS POINTS</span>
+                        </dd>
+                        <dd>
+                            <img src="./images/ico_wifi01b.png" alt="wifi">
+                            <span>FREE WIFI</span>
+                        </dd>
+                        <dd>
+                            <img src="./images/ico_checkOut01b.png" alt="check out">
+                            <span>EXPRESS CHECK OUT</span>
+                        </dd>
+                    </ul>
+                </article>
+            </section>
+            <section>
+                <article class="reser_info">
+                    <h2>예약안내</h2>
+                    <table>
+                        <caption>Price</caption>
+                        <tr>
+                            <th>룸타입</th>
+                            <th>비성수기 주중</th>
+                            <th>비성수기 주말</th>
+                            <th>성수기</th>
+                            <th>비고</th>
+                        </tr>
+                        <tr>
+                            <th>Studio 16</th>
+                            <td>120&#44;000원
+                            </td>
+                            <td>140&#44;000원
+                            </td>
+                            <td>180&#44;000원
+                            </td>
+                            <td rowspan="2" class="td_txt">인원추가시
+                                <br>1인당 20000
+                                <br>이불 셋트 추가<br>
+                                10&#44;000원
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Studio 23</th>
+                            <td>160&#44;000원
+                            </td>
+                            <td>180&#44;000원
+                            </td>
+                            <td>220&#44;000원
+                            </td>
+                        </tr>
+                    </table>
+                    <h3>안내</h3>
+                    <p>
+                        입실시간은  오후 3시이며 퇴실시간은 오전 11시입니다.</p>
+                    <p>객실에서는 고기 또는 생선 굽기&#44; 튀김요리 및 해산물요리는 할 수 없습니다.</p>
+                    <p>귀중품은 반드시 안내데스크에 보관해주세요. 객실 내에서의 귀중품 분실에 대해서 책임지지 않습니다.</p>
+                    <p>퇴실시&#44; 객실 카드키는 안내데스크로 반납해주시기 바랍니다.</p>
+                </article>
+            </section>
+        </main>
+        <!--메인영역끝 푸터시작-->
+
+
+        <footer>
+            <div class="f_reservation">
+                <p>
+                    <i class="far fa-calendar-check"></i>예약 안내<i class="fas fa-angle-down"></i>
+                </p>
+            </div>
+            <div class="f_rbox">
+                <a href="01011111111" title="예약전화">예약문의 010.123.4567</a>
+                <a href="reser1.html" title="실시간 예약 페이지로 이동">
+                    Online 예약하기<i class="far fa-hand-point-right"></i>
+                </a>
+            </div>
+            <div class="footer_in">
+                <a href="index.html" title="home으로">
+                    <img src="./01.img/logo.png" alt="로고">
+                </a>
+                <div class="footersns">
+                    <ul>
+                        <li><a href="#" title="구글"><i class="fab fa-google"></i></a></li>
+                        <li><a href="#" title="인스타그램"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" title="트위터"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+                <nav>
+                    <ul class="footernavi">
+                        <li>
+                            <a href="#" title="개인정보처리방침">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#" title="이메일무단수집거부">이메일무단수집거부</a>
+                        </li>
+                        <li>
+                            <a href="#" title="이용약관">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#" title="고객센터">고객센터</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <address>상호명 &#58; &#40;주&#41;제주올레로 &nbsp;&nbsp;&nbsp; 대표이사 &#58; OOO &nbsp;&nbsp;&nbsp;<br>주소 &#58; 제주특별자치도 제주시 일주서로 7335&#45;1
+                  &#40;외도이동 343번지&#41;<br>HP &#58; 010&#46; 000&#46; 0000 &nbsp;&nbsp;&nbsp; 이메일 &#58; a24055113&#64;hanmail.net<br>Copyright &copy;
+                  &#40;주&#41;제주올레로&#46; All Rights Reserved&#46;
+            </address>
+            <aside>
+                <a href="#" title="위로가기">
+                    <i class="fas fa-angle-up"></i><br>TOP</a>
+            </aside>
+
+        </footer>
+    </body>
+</html>

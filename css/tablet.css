@@ -1,0 +1,490 @@
+@charset "utf-8";
+
+@media screen and (min-width:600px) and (max-width:1024px) {
+
+
+    body {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    /*헤더영역 시작 */
+    header {
+        font-size: 14px;
+        width: 100%;
+        height: 120px;
+    }
+
+    /*맨윗줄*/
+
+    #login {
+        position: absolute;
+        top: 0px;
+        display: flex;
+        height: 30px;
+        width: 100%;
+        margin-top: 15px;
+        font-size: 12px;
+        color: #333333;
+        box-sizing: border-box;
+        padding-left: 15px;
+    }
+
+    #login>#search {
+        display: none;
+    }
+
+    #header_s {
+        display: none;
+    }
+
+    #search {
+        position: relative;
+        top: -3px;
+        margin: 0px 0px 10px 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 1px solid #cccccc;
+        border-radius: 10px;
+    }
+
+    #header_s:checked~#search {
+        display: block;
+    }
+
+    .login {
+        font-size: 12px;
+        text-decoration: none;
+        position: absolute;
+        right: 15px;
+
+    }
+
+    /*맨윗줄*/
+    h1 img {
+        width: 240px;
+        height: 65px;
+        padding-top: 20px;
+    }
+
+    .gnb>ul {
+        display: flex;
+        justify-content: space-around;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .gnb li {
+        position: relative;
+        top: 20px;
+        padding: 0px 30px;
+    }
+
+    .gnb>ul a {
+        padding: 20px 0px;
+    }
+
+    .gnb>ul>li:nth-last-child(4) {
+        display: none;
+    }
+
+    .gnb01 {
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: -10px;
+        z-index: 1000000;
+    }
+
+    /*스크롤숨기기*/
+    /*토글 체크시 서브메뉴 나오게 하기 */
+    #toggle:checked~.gnb>ul .gnb01 {
+        display: block;
+    }
+
+    /* 2단 네비게이션 나올때 배경하얗게*/
+    .gnb {
+        position: relative;
+    }
+
+    .gnb>ul::after {
+        display: none;
+        content: "";
+        width: 100%;
+        height: 180px;
+        background-color: #ffffff;
+        position: absolute;
+        z-index: 500;
+        top: 50px;
+        left: 0px;
+    }
+
+    /*토글 체크시 서브메뉴 나오게 하기 */
+    #toggle:checked~.gnb>ul::after {
+        display: block;
+    }
+
+
+    .gnb01>li {
+        display: block;
+        line-height: 30px;
+        padding: 10px 0px;
+        position: relative;
+        left: 10px;
+    }
+
+    #menu {
+        position: absolute;
+        left: 10px;
+        top: 70px;
+        z-index: 10000000;
+        width: 30px;
+        height: auto;
+    }
+
+    #reser {
+        display: none;
+    }
+
+    /*메인 비주얼  */
+    main {
+        overflow: hidden;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    #visual {
+        position: relative;
+    }
+
+    #visual .main_slide {
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    #visual>h2 {
+        color: #ffffff;
+        font-family: '나눔 명조', serif;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        z-index: 4000;
+        transform: translateX(-200px);
+        width: 400px;
+    }
+
+    #visual .visual_t {
+        font-size: 1.8rem;
+        line-height: 2
+    }
+
+    #reservation {
+        position: absolute;
+        top: 80%;
+        left: 1%;
+        z-index: 40000;
+        width: 98%;
+        background-color: rgb(231, 231, 231);
+        border-radius: 10px;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+    }
+
+    #reservation ul {
+        display: flex;
+    }
+
+    #reservation ul>li {
+        line-height: 45px;
+    }
+
+    #reservation ul>.small {
+        width: 10%;
+    }
+
+    #reservation ul>.large {
+        width: 20%;
+    }
+
+    #reservation ul a {
+        padding: 10px 10px;
+    }
+
+    #reservation ul>li:nth-last-child(2) {
+        width: 15%;
+    }
+
+    #reservation ul>li:nth-child(odd) {
+        background-color: rgba(255, 255, 255, 0.788);
+        border-radius: 10px;
+    }
+
+    #reservation ul>li:last-child {
+        width: 25%;
+        background-color: #2b3b04;
+        border-radius: 10px;
+        color: #fff;
+        transition: 0.5s;
+    }
+
+    #reservation ul>li:last-child>a {
+        color: #fff;
+
+    }
+
+
+    /*section 1 - room */
+    .roomtitle {
+        padding: 30px 0px;
+    }
+
+    .room>p {
+        padding-bottom: 50px;
+    }
+
+    .room>article li {
+        width: 50%;
+        height: 50%;
+        position: relative;
+    }
+
+    .room>article li>a>img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .room>article {
+        padding: 30px 0px;
+    }
+
+    .room>article>ul {
+        display: flex;
+    }
+
+    .room>article>ul h3 {
+        font-size: 1rem;
+        color: #b65740;
+        font-weight: bold;
+        padding: 0px 0px 20px 0px;
+    }
+
+    .room>article>ul p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        text-align: left;
+        padding: 0px 30px;
+    }
+
+    .room>article>ul .botton {
+        position: absolute;
+        right: 40px;
+        bottom: -50px;
+        font-size: 12px;
+    }
+
+    .room>article>ul .botton>a {
+        padding: 13px 35px;
+        background-color: rgb(199, 129, 129);
+        transition: 0.5s;
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    /* section2 관광지소개*/
+
+    .tour {
+        width: 100%;
+        margin: 50px auto;
+        height: 450px;
+    }
+
+    .tour>h2 {
+        padding-bottom: 100px;
+    }
+
+    .swiper-slide li:last-child a {
+        font-weight: bold;
+        line-height: 2;
+        font-size: 0.8rem;
+    }
+
+    .mySwiper {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .mySwiper .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mySwiper .swiper-slide {
+        text-align: center;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .mySwiper .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    /*section3 menu */
+    h6 {
+        display: none;
+    }
+
+    .menu ul {
+        display: flex;
+    }
+
+    .menu ul>li {
+        width: 100%;
+        height: 300px;
+        position: relative;
+    }
+
+    .menu ul>li>a>img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .menu ul>li>.menuinfo {
+        color: cornsilk;
+        width: 100%;
+        font-size: 2rem;
+        position: absolute;
+        top: 30%;
+        left: 0%;
+        z-index: 50;
+        text-transform: uppercase;
+    }
+
+    .menu ul>li .menu_p {
+        font-size: 1.2rem;
+    }
+
+    /* 추가된 부분 */
+    .darkness {
+        position: absolute;
+        z-index: 45;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        background: #000000;
+        opacity: 0.3;
+        /* 투명모드  */
+        transition: all .6s linear;
+        /* 애니메이션효과 */
+    }
+
+
+
+
+    /*푸터 */
+    .footer_in {
+        width: 100%;
+        height: fit-content;
+        background-color: #333333;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .footersns {
+        display: flex;
+        margin: 0px 40%;
+        padding: 30px 0px;
+    }
+
+    .footersns img {
+        width: 40px;
+    }
+
+    .call {
+        width: 170px;
+        height: 80px;
+        color: #ffffff;
+        position: absolute;
+        right: 3%;
+    }
+
+    .call>img {
+        float: left;
+        width: 50px;
+
+    }
+
+    .call #call_t {
+        font-weight: bold;
+        line-height: 30px;
+
+    }
+
+    .footernavi a {
+        color: #fff;
+        padding: 20px 0px;
+    }
+
+    .footernavi {
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+    }
+
+    .footer_in .foot_logo {
+        float: left;
+        padding: 20px;
+    }
+
+    .footer_in>address {
+        text-align: left;
+        padding: 20px 0px 40px 0px;
+        color: rgb(180, 180, 180);
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
+
+    aside {
+        position: fixed;
+        right: 10px;
+        bottom: 200px;
+        z-index: 46;
+
+    }
+
+    aside>a {
+        background-color: #fff;
+        font-size: 1rem;
+        width: 50px;
+        height: 50px;
+        padding: 25px 20px;
+        border: 1px solid #d3d2d2;
+        border-radius: 50%;
+        transition: 0.5s;
+
+    }
+
+}
