@@ -461,7 +461,7 @@ main {
 .grid_wrap {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 250px 50px 300px 50px;
+    grid-template-rows: 250px 50px 300px 60px;
     grid-gap: 10px;
     padding: 20px;
     width: 70%;
