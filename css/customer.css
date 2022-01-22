@@ -1,5 +1,6 @@
 @charset "utf-8";
-
+/*site: http://rahyeri.dothome.co.kr/jeju  sub-customer css
+최종수정일 : 22-01-22*/
 h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 9vw;
@@ -13,6 +14,7 @@ h2 {
 article {
     width: 100%;
     background-color: rgb(159, 180, 226);
+    margin-bottom:80px;
 }
 
 .intro_txt {
@@ -26,8 +28,19 @@ article {
     font-weight: bold;
     font-size: 16px;
 }
-section{height:600px;}
+
+.sub_title{
+    font-size:36px;
+}
+section{
+    position:relative;
+    height:450px;
+}
 section>article {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%);
     background-color: #fff;
 }
 
@@ -35,27 +48,33 @@ section>article>ul {
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin: 0px auto 150px auto;
+    margin: 0px auto 50px auto;
 }
 
 section>article>ul>li {
-
     width: 80%;
     margin: 0px auto;
-
+    border-bottom: 1px solid #ccc;
+    font-size:0.8rem;
 }
 
 section>article>ul>li:first-child {
-    border-top: 3px solid #222;
-    text-indent: 25px;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
 }
-
-section>article>ul>li a {
-    display: inline-block;
+section>article>ul>li >div{
+    text-align:center;
+    width:9%;
+    float:left;
+    margin-left:1%;
+    line-height:2;
+}
+section>article>ul>li > a {
+    display: block;
+    float:left;
     width: 90%;
-    border-bottom: 1px solid #ccc;
-    height: 60px;
-    line-height: 60px;
+    height:50px;
+    line-height: 2;
 }
 
 .subject {
@@ -64,38 +83,24 @@ section>article>ul>li a {
 }
 
 section>article>ul>li p {
-    width: 60%;
-    margin: 20px auto;
+    width: 90%;
+    margin: 20px 0px 20px auto;
     line-height: 1.5;
     display: none;
+    box-sizing: border-box;
+    padding: 0px 22px;
 }
 
 .qna {
-    position: absolute;
-    top: 420px;
-    left: 50%;
-    transform: translate(-50%);
     text-align: left;
     display: none;
 }
 
 @media screen and (min-width:1025px) and (max-width:1550px) {
-    .qna {
-        position: absolute;
-        top: 300px;
-    }
-
-    section>article>ul>li a {
-        display: inline-block;
-        width: 90%;
-        border-bottom: 1px solid #ccc;
-        height: 40px;
-        line-height: 40px;
-        font-size: 13px;
-    }
+   
 
     section>article>ul>li p {
-        font-size: 12px;
+        font-size: 0.8rem;
     }
 }
 
@@ -153,7 +158,7 @@ textarea {
 
 .tab_btn {
     width: 70%;
-    margin: 100px auto;
+    margin: 100px auto 30px auto;
 }
 
 .tab_btn a {
@@ -173,47 +178,37 @@ textarea {
     }
 
     .tab_btn {
-        width: 70%;
-        margin: 50px auto 100px auto;
+        width: 100%;
+        margin: 50px auto 20px auto;
     }
 
     .tab_btn a {
-        font-size: 10px;
+        font-size: 0.8rem;
     }
 
     section>article>ul {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        margin: 0px auto 150px auto;
+        width: 98%;
+        margin: 0px auto 50px auto;
     }
 
-    section>article>ul>li,
-    section>article>ul>li a {
-        font-size: 12px;
+    section>article>ul>li {
+        font-size: 0.8rem;
         width: 100%;
         margin: 0px auto;
-
     }
 
     .date {
-        font-size: 10px;
+        font-size: 0.8rem;
     }
 
     #inquiry {
         width: 100%;
     }
 
-    section>article>ul>li:first-child {
-        width: 100%;
-        text-indent: 0;
-    }
 
     .qna {
-        position: absolute;
-        top: 250px;
-        left: 50%;
-        transform: translate(-50%);
         text-align: left;
         display: none;
     }
@@ -221,13 +216,32 @@ textarea {
     section>article>ul>li a {
         display: inline-block;
         width: 90%;
-        border-bottom: 1px solid #ccc;
-        height: auto;
         line-height: 2;
-        font-size: 10px;
+        font-size: 0.8rem;
     }
-
+    
     section>article>ul>li p {
-        font-size: 10px;
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:421px) {
+    section{
+        height:580px;
+    }
+}
+@media screen and (min-width:826px) and (max-width:3020px){
+    section>article>ul>li div {
+        line-height:45px;
+    }
+}
+@media screen and (min-width:520px) and (max-width:3020px){
+    section>article>ul>li a {
+        line-height:45px;
+    }
+}
+@media screen and (min-width:300px) and (max-width:3020px){
+    
+    section>article>ul>li:first-child div, section>article>ul>li:first-child a {
+        line-height:45px;
     }
 }
