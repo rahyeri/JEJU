@@ -2,14 +2,12 @@
 
 /* 공통 */
 .top_img {
-    height: 300px;
     width: 100%;
     overflow: hidden;
     position: relative;
 }
 
 .top_img>div {
-    height: 300px;
     width: 100%;
     overflow: hidden;
     animation: moving 25s linear 1s infinite;
@@ -38,17 +36,21 @@
 
 .top_img h2 {
     position: absolute;
-    top: 70px;
+    top: 30px;
     left: 50PX;
-    font-size: 7vw;
+    font-size: 9vw;
     font-family: 'Times New Roman', Times, serif;
     z-index: 5;
     color: #fff;
 }
-
+.sub_title{
+    font-size:2.2rem;
+    margin:80px 0px;
+    font-weight:bold;
+}
 /*  */
 .about {
-    background-color: #e8eaf3;
+    background-color: #EFF6FF;
     padding: 10px 0px;
     margin: 50px 0px;
 }
@@ -99,12 +101,12 @@
     align-items: center;
     width: 100%;
     max-width: 1280px;
-    margin: 100px auto;
+    margin: 10px auto;
     justify-content: space-around;
 }
 
 .reser_main>article>ul {
-    color: #fff;
+    color: #555;
     height: 100%;
     flex-direction: column;
     justify-content: space-around;
@@ -118,7 +120,7 @@
     border: 3px solid #fff;
     /* margin:5px auto 5px auto; */
     border-radius: 30px;
-    background-color: rgb(81, 117, 131);
+    background-color: #DBEAFE;
     cursor: pointer;
 }
 
@@ -127,7 +129,7 @@
 }
 
 .reser_main>article {
-    background-color: rgb(192, 200, 214);
+    background-color: #DBEAFE;
     border: 3px solid #fff;
     width: 90%;
     height: 300px;
@@ -159,7 +161,7 @@ input[type="submit"] {
     border: none;
     font-size: 26px;
     font-weight: bold;
-    background-color: rgb(22, 58, 71);
+    background-color: #3669a8;
     color: #fff;
     cursor: pointer;
 }
@@ -179,20 +181,17 @@ select {
 }
 
 .reser_main>article:hover {
-    border: 3px solid rgb(146, 153, 161);
+    border: 3px solid #ccc;
 }
 
 .reser_main>article:first-of-type:hover {
     border: none;
 }
 
-.reser_main>article:first-of-type:hover li {
-    border: 3px solid rgb(146, 153, 161);
-}
 
 /* 예약안내 */
 .reser_info h2 {
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: bold;
     color: #222;
 }
@@ -200,7 +199,7 @@ select {
 caption,
 h3 {
     text-align: left;
-    width: 88%;
+    width: 92%;
     margin: 40px auto;
     font-size: 26px;
     font-weight: bold;
@@ -213,7 +212,7 @@ h3 {
 }
 
 .reser_main>article>ul h3 {
-    font-size: 26px;
+    font-size: 1.3rem;
     margin: 20px auto 10px auto;
 }
 
@@ -249,7 +248,7 @@ th {
 
 @media screen and (max-width:1024px) {
     .top_img h2 {
-        top: 10px;
+        top: 20px;
     }
 
     .top_img,
@@ -257,13 +256,16 @@ th {
         height: auto;
     }
 
+    .sub_title{
+        font-size:1.7rem;
+    }
     .reser_main {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
         max-width: 1280px;
-        margin: 100px auto;
+        margin: 10px auto;
         justify-content: space-around;
     }
 
@@ -296,7 +298,7 @@ th {
     caption,
     h3 {
         text-align: left;
-        width: 98%;
+        width: 92%;
         margin: 40px auto;
         font-size: 16px;
         font-weight: bold;
@@ -304,12 +306,14 @@ th {
         line-height: 2;
     }
 
-    h3 {
-        width: 98%;
+    .about_stay > dl dd{
+        font-size:0.8rem;
     }
-
+    .about_stay dd:last-child {
+        transform: translateY(0px);
+    }
     .reser_main>article>ul h3 {
-        font-size: 16px;
+        font-size: 1.2rem;
         margin: 20px auto 10px auto;
     }
 
@@ -326,7 +330,7 @@ th {
         line-height: 2;
         font-size: 12px;
         text-align: left;
-        width: 98%;
+        width: 92%;
         margin: 0px auto;
     }
 
@@ -341,7 +345,7 @@ th {
 
     /*  */
     .about {
-        background-color: #e8eaf3;
+        background-color: #EFF6FF;
         padding: 10px 0px;
         margin: 50px 0px;
     }
@@ -359,7 +363,7 @@ th {
     }
 
     .about_stay dt {
-        font-size: 12px;
+        font-size: 1rem;
         font-weight: bold;
         text-align: center;
         letter-spacing: 2px;
@@ -371,23 +375,8 @@ th {
         width: 35px;
     }
 
-    caption,
-    h3 {
-        text-align: left;
-        width: 58%;
-        margin: 40px auto;
-        font-size: 20px;
-        font-weight: bold;
-        border-bottom: 2px solid #000133;
-        line-height: 2;
-    }
-
-    h3 {
-        width: 62%;
-    }
 
     .reser_main>article>ul h3 {
-        font-size: 26px;
         margin: 20px auto 10px auto;
     }
 

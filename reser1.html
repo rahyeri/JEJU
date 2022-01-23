@@ -5,20 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatable" content="IE=edge">
         <title>제주 올레로 펜션 홈페이지입니다.</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        <!-- 리셋, 베이스, 레이아웃, 아이콘폰트, 구글폰트 -->
         <link href="./css/reset.css" rel="stylesheet" type="text/css">
         <link href="./css/base.css" rel="stylesheet" type="text/css">
         <link href="./css/layout.css" rel="stylesheet" type="text/css">
-        <link href="./css/reser.css" rel="stylesheet" type="text/css">
         <link href="./css/all.min.css" rel="stylesheet" type="text/css">
-        <link
-        href="./css/aos.css" rel="stylesheet" type="text/css">
-        <!-- 제이쿼리슬라이드 -->
-        <link href="./css/swiper.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"/>
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        
+        <!-- 페이지 스타일시트 -->
+        <link href="./css/reser.css" rel="stylesheet" type="text/css">
         <style></style>
         <!-- 스크립트 -->
         <script src="./js/swiper.js"></script>
@@ -32,13 +29,6 @@
 
         <script>
             $(document).ready(function () {
-                $('.top_img h2').animate({
-                    'letter-spacing': '30px'
-                }, 1000).animate({
-                    'letter-spacing': '2px'
-                }, 1000).animate({
-                    'letter-spacing': '5px'
-                }, 1000);
 
 
                 // 내비
@@ -83,6 +73,16 @@
                     room1.hide();
                     $(this).css('padding-top', '80px');
 
+                });
+                //예약1칸에 마우스오버효과 
+                let roomFirst = $('.reser_main>article:first-of-type >ul >li');
+                roomFirst.mouseenter(function(){
+                    $(this).css('border','3px solid #ccc');
+                    $(this).children('h3').css('color','#1E3A8A');
+                });
+                roomFirst.mouseleave(function(){
+                    $(this).css('border','3px solid #fff');
+                    $(this).children('h3').css('color','#333');
                 });
             });
         </script>
@@ -206,6 +206,7 @@
                     <img src="./01.img/reser1.jpg" alt="바다사진">
                 </div>
             </section>
+            <p class="sub_title">실시간예약</p>
             <!-- 실시간예약메인 -->
             <section class="reser_main">
                 <article>
