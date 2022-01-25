@@ -14,49 +14,66 @@ article {
     width: 100%;
     background-color: rgb(159, 226, 204);
 }
-
-.intro_txt {
-    position: absolute;
-    top: 200px;
-    right: 50px;
-    font-size: 13px;
+/**/
+.sub_title{
+    font-size:2.2rem;
+    font-weight:bold;
+    margin:80px 0px;
 }
-
-.intro_txt span {
-    font-weight: bold;
-    font-size: 16px;
-}
-
+/**/
 main {
     height: fit-content;
     padding-bottom: 50px;
 }
-
-section {
-    height: 500px;
-    padding-bottom: 50px;
+section{
+    max-width:1200px;
+    margin:0px auto 30px auto;
+}
+section > article{
+    background-color:transparent;
+}
+section > article > .tour_gallery{
+    width:94%;
+    margin:0px auto;
+    display:grid;
+    grid-template-columns:auto auto auto;
+    grid-template-rows:repeat(3, 1fr);
+    grid-gap:10px;
+}
+.tour_gallery > li img{
+    width:100%;
+    object-fit:cover;
+    transition:0.5s;
 
 }
-
-.swiper-slide a {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.5;
+.tour_gallery > li a:first-of-type{
+    display:block;
+    border-radius:10px;
+    overflow:hidden;
 }
-
-.swiper-slide a span {
-    display: block;
-    font-size: 12px;
-    margin: 10px;
+.tour_gallery > li a:first-of-type:hover img{
+    transform:scale(1.1);
+    filter:brightness(0.8);
 }
+.tour_gallery > li:hover a:last-of-type{
+    font-weight:bold;
+}
+.tour_gallery > li a:last-of-type{
+    display:block;
+    padding:10px;
+}
+/*하단 페이지넘버*/
+.list{
+    display:flex;
+    width:100px; 
+    margin:0px auto;
+}
+@media screen and (max-width:767px){
+    section > article > .tour_gallery{
+        grid-template-columns:auto auto;
+    }
 
-h3 {
-    font-size: 26px;
-    font-weight: bold;
-    margin: 50px auto;
+    .tour_gallery > li a:last-of-type{
+        font-size:0.8rem;
+    }
 }

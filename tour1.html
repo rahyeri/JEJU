@@ -15,46 +15,7 @@
         "text/css">
         <link href="./css/all.min.css" rel="stylesheet" type="text/css">
         <link href="./css/aos.css" rel="stylesheet" type="text/css">
-        <!-- 제이쿼리슬라이드 -->
-        <link href="./css/swiper.css" rel="stylesheet" type="text/css">
-        <link href="./css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" />
 
-        <style> 
-
-.swiper {
-        width: 100%;
-        height: 100%;
-        position:relative;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-        </style>
         <!-- 스크립트 -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -65,9 +26,7 @@
       
         <script>
            $(document).ready(function(){ 
-               //타이틀 
-               $('article > h2').animate({'letter-spacing':'30px'},1000).animate({'letter-spacing':'2px'},1000).animate({'letter-spacing':'5px'},1000);
-         
+               
              //내비
              let g= $('.gnb');
              $('i.fa-close').click(function(){
@@ -162,31 +121,78 @@
             
         </header>
         <!--헤더영역끝 메인시작-->
-
         <main>
+        <article>
+            <h2>TOUR</h2>
+        </article>
+        <p class="sub_title">주변 관광지</p>
+        <section>
           <article>
-            <h2>TOUR Information</h2>
+            <ul class="tour_gallery">
+              <li>
+                <a href="#" title="맨도롱 또똣 촬영지 봄날">
+                  <img src="01.img/tour1.jpg" alt="">
+                </a>
+                <a href="#" title="맨도롱 또똣 촬영지 봄날">맨도롱 또똣 촬영지 봄날</a>
+                
+              </li>
+              <li>
+                <a href="#" title="신창풍차 해안도로">
+                  <img src="01.img/tour2.jpg" alt="">
+                </a>
+                <a href="#" title="신창풍차 해안도로">신창풍차 해안도로</a>
+              </li>
+              <li>
+                <a href="#" title="선운정사">
+                  <img src="01.img/tour3.jpg" alt="">
+                </a>
+                <a href="#" title="연꽃이 빛나는 신운정사">연꽃이 빛나는 신운정사</a>
+              </li>
+              <li>
+                <a href="#" title="휴애리">
+                  <img src="01.img/tour5.jpg" alt="">
+                </a>
+                <a href="#" title="아름다운 개울 휴애리">아름다운 개울 휴애리</a>
+              </li>
+              <li>
+                <a href="#" title="엉또폭포">
+                  <img src="01.img/tour7.jpg" alt="">
+                </a>
+                <a href="#" title="엉또폭포">엉또폭포</a>
+              </li>
+              <li>
+                <a href="#" title="곽지 해수욕장">
+                  <img src="01.img/tour8.jpg" alt="">
+                </a>
+                <a href="#" title="곽지 해수욕장">곽지 해수욕장</a>
+              </li>
+              <li>
+                <a href="#" title="에코랜드">
+                  <img src="01.img/tour4.jpg" alt="">
+                </a>
+                <a href="#" title="에코랜드">아이들과 함께 에코랜드</a>
+              </li>
+              <li>
+                <a href="#" title="절물자연 휴양림">
+                  <img src="01.img/tour6.jpg" alt="">
+                </a>
+                <a href="#" title="절물자연 휴양림">절물자연 휴양림</a>
+              </li>
+              <li>
+                <a href="#" title="관음사">
+                  <img src="01.img/tour9.jpg" alt="">
+                </a>
+                <a href="#" title="관음사">관음사</a>
+              </li>
+            </ul>
           </article>
-
-          <section>
-            <h3>주변 관광지 </h3>
-              <!-- Swiper -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="./01.img/tour1.jpg" alt="관광지"><a href="#" title="상세페이지">맨도롱 또똣 촬영지 봄날<span>드라마 	&#39;맨도롱 또똣	&#39;을 촬영한 <br>아기자기하고 귀여운 컨셉의<br> 커피가 맛있는 카페</span></a></div>
-                  <div class="swiper-slide"><img src="./01.img/tour2.jpg" alt="관광지"><a href="#" title="상세페이지">신창풍차 해안도로<span>망망대해 한가운데 나열된 풍차들<br>신나게 드라이브를 하다보면<br>감탄사가 절로 나오는 </span></a></div>
-                  <div class="swiper-slide"><img src="./01.img/tour3.jpg" alt="관광지"><a href="#" title="상세페이지">연꽃이 빛나는 선운정사<span>빛나는 연꽃을 보셨나요?<br>신비로운 빛을 가진<br>애월의 야경명소</span></a></div>
-                  <div class="swiper-slide"><img src="./01.img/tour5.jpg" alt="관광지"><a href="#" title="상세페이지">아름다운 개울 휴애리<span>아이들과 함께하는 자연체험 <br>한라산 자락 중반에 있는<br> 자연 생활 체험 공원</span></a></div>
-                  <div class="swiper-slide"><img src="./01.img/tour7.jpg" alt="관광지"><a href="#" title="상세페이지">재미있고 시원한 엉또폭포<span>비가오면 절벽에서 내리는<br> 시원한 폭포를 볼 수 있는<br> 1박 2일 출연 명소</span></a></div>
-                  <div class="swiper-slide"><img src="./01.img/tour8.jpg" alt="관광지"><a href="#" title="상세페이지">회색모래 곽지 해수욕장<span>곱디고운 모래 해변과 <br>아름다운 황금빛 일몰을 볼 수 있는<br> 애월에서 바다가 가장 이쁜 곳</span></a></div>
-                  <div class="swiper-slide"><img src="./01.img/tour4.jpg" alt="관광지"><a href="#" title="상세페이지">에코랜드 테마파크 <span>기차를 타고 둘러보는  <br>온가족이 모두 좋아하는<br> 아름다운 풍경</span></a></div>
-                  <div class="swiper-slide"><img src="./01.img/tour6.jpg" alt="관광지"><a href="#" title="상세페이지">제주절물자연휴양림<span>피톤치트향이 솔솔 	&#126;  <br>몸과 마음이 모두 치유되는 <br>상쾌한 자연의 숲길</span></a></div>
-                  <div class="swiper-slide"><img src="./01.img/tour9.jpg" alt="관광지"><a href="#" title="상세페이지">한라산 동북쪽 위치한 관음사<span> 미륵대불 앞에 기도하면  <br>소원이 이루어 진다는<br> 한라산 등반 유명코스</span></a></div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            
-          </section>
+        </section>
+        <ul class="list">
+          <li><a href="#" title="1"><i class="fas fa-angle-left"></i></a></li>
+          <li><a href="tour_sub1.html" title="1">1</a></li>
+          <li><a href="tour_sub2.html" title="2">2</a></li>
+          <li><a href="#" title="1"><i class="fas fa-angle-right"></i></a></li>
+        </ul>
         </main>
         <!--메인영역끝 푸터시작-->
         <footer>
